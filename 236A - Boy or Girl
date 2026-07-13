@@ -1,0 +1,52 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int i,j,counts=0,store=1;
+    string name;
+    cin>>name;
+
+    //cout<<name[0];
+    //cout<<name.size();
+    for (i=0; i<name.size(); i++)
+    {
+        j = i+1;
+        store = 1;
+
+        while(j<= name.size() && name[i] != name[j])
+        {
+            j++;
+
+        }
+
+        /*
+        if(name[i] == name[j])
+        {
+            flag = 1;
+        }
+        */
+
+        //if(j == name.size()-1)
+
+
+
+        if(j < name.size() && name[i] == name[j])
+        {
+            store = 0;
+        }
+
+        counts = counts + store;
+        
+
+    }
+
+    //cout<<counts;
+    if(counts%2 == 0)
+    {
+        cout<<"CHAT WITH HER!";
+    }
+    else
+    {
+        cout<<"IGNORE HIM!";
+    }
+}
