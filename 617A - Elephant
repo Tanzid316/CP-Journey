@@ -1,0 +1,24 @@
+//Code Forces
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int distance,i=5,stores=0;
+    cin>>distance;
+
+    if(1<=distance && distance<=1000000)
+    {
+        stores = distance/5;
+        if(distance%5 != 0)
+        {
+
+            stores++;
+        }
+
+
+        cout<<stores;
+    }
+
+
+    return 0;
+}
