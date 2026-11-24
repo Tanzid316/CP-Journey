@@ -1,0 +1,32 @@
+/*
+Problem Set : 
+https://codeforces.com/contest/1517/problem/A?adcd1e=caf4ftjqe3xy1d&csrf_token=81ed79895e52263e811b9fa7c1a9535e
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        long long n;
+        cin>>n;
+        int ans=0;
+        while(n>=2050)
+        {
+            ans++;
+            long long x=2050;
+            while(x<=n)
+            {
+                x*=10;
+            }
+            x/=10;
+            n=n-x;
+        }
+        if(n!=0)cout<<-1<<endl;
+        else cout<<ans<<endl;
+    }
+    return 0;
+}
